@@ -1,0 +1,24 @@
+Ability to Search
+-----------------
+
+testSearchWithResults
+> Open Project: "Tutorial"
+> Search: "Home"
+> Test: search results: "Home Page"
+> Open Page: "Home Page"
+> Test: page title == "Home Page"
+> Test: page body == "This is the home page for a wiki. You can edit pages with markdown. You can also make links to other pages in the wiki"
+> Search: "congratulations"
+> Test: search results: "Second Page"
+> Open Page: "Second Page"
+> Test: page title == "Second Page"
+> Test: page body == "Congratulations, the link worked."
+> Search: "page"
+> Test: search results: "Home Page", "Second Page", "Third Page"
+> End Test
+
+testSearchNoResults
+> Open Project: "Tutorial"
+> Search: "no result"
+> Test: search results: none
+> End Test

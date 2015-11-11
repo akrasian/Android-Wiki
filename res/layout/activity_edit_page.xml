@@ -1,0 +1,137 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="comp3350.wiki.presentation.CoursesActivity" >
+    
+	<TextView
+        android:id="@+id/pageNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/controls"
+        android:layout_alignStart="@+id/controls"
+        android:layout_alignRight="@+id/controls"
+        android:layout_alignEnd="@+id/controls"
+        android:layout_marginTop="0dp"
+        android:text="@string/page_name"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editPageName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/pageNameText"
+        android:layout_alignStart="@+id/pageNameText"
+        android:layout_alignRight="@+id/controls"
+        android:layout_alignEnd="@+id/controls"
+        android:layout_below="@+id/pageNameText"
+        android:ems="9"
+        android:inputType="textNoSuggestions" >
+
+        <requestFocus
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </EditText>
+<!-- 
+    <TextView
+        android:id="@+id/pageTextText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editPageName"
+        android:layout_alignStart="@+id/editPageName"
+        android:layout_below="@+id/editPageName"
+        android:layout_marginTop="5dp"
+        android:text="@string/page_text"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+ -->
+    <LinearLayout
+        android:id="@+id/editButtons"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editPageName"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:measureWithLargestChild="true"
+        style="?android:attr/buttonBarStyle"
+        android:orientation="horizontal"
+        android:weightSum="2"
+		android:background="@+drawable/border">
+    
+    	<Button
+	        android:id="@+id/buttonAddLink"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:layout_gravity="start"
+	        android:maxLines="2"
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:enabled="true"
+	        android:onClick="buttonAddLinkOnClick"
+	        android:text="@string/add_link" />
+    	
+	    <Button
+	        android:id="@+id/buttonAddCategory"
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:enabled="true"
+	        android:onClick="buttonAddCategoryOnClick"
+	        android:text="@string/add_category" />
+    
+    </LinearLayout>
+    
+    <EditText
+        android:id="@+id/editPageText"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignLeft="@+id/editButtons"
+        android:layout_alignStart="@+id/editButtons"
+        android:layout_below="@+id/editButtons"
+        android:layout_above="@+id/controls"
+        android:layout_marginTop="5dp"
+        android:ems="8"
+        android:inputType="textNoSuggestions|textMultiLine"
+        android:scrollHorizontally="false" 
+        />
+    
+    <LinearLayout
+        android:id="@+id/controls"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="0dp"
+        android:background="@+drawable/border">
+
+	    <Button
+	        android:id="@+id/cancel"
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:enabled="true"
+	        android:onClick="buttonCancelPageEditOnClick"
+	        android:text="@string/cancel" />
+	    <Button
+	        android:id="@+id/buttonSavePage"
+	        style="?android:attr/buttonBarButtonStyle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_weight="1"
+	        android:enabled="true"
+	        android:onClick="buttonSavePageOnClick"
+	        android:text="@string/save" />
+	
+	</LinearLayout>
+
+</RelativeLayout>

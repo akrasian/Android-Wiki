@@ -1,0 +1,29 @@
+Most Popular Pages
+------------------
+
+testAccessPopularPages
+> Open Project: "Second Project"
+> Test: page contains "Most Popular"
+> Test: page contains "Page Title 10"
+> Test: page contains "Page Title 11"
+> Test: page contains "Page Title 12"
+> Click "Page Title 11" link
+> Test: page title == "Page Title 11"
+> Test: page body == "Page Content 11"
+> End Test
+
+testAccessPopularProjects
+> Start at main menu
+> Test: menu contains "Most popular projects"
+> Test: Most popular projects contains "Tutorial"
+> Test: Most popular projects contains "Second Project"
+> Click "Tutorial" link
+> Test: page title == "Home Page"
+> Test: body contains "This is the home page for a wiki"
+> Test: body contains "You can edit pages with markdown"
+> Test: body contains "You can also make links to other pages in the wiki"
+> Return to main menu
+> Click "Second Project" link
+> Test: page title == "Page Title 6"
+> Test: page body == "Page Content 6"
+> End Test

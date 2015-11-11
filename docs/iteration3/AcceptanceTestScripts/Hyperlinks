@@ -1,0 +1,56 @@
+Create Hyperlinks in Text
+-------------------------
+
+testCreateHyperlink
+> Create Project: "Test Project"
+> Create Page: title "Test Home Page", body "Test page body."
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Open Action Bar menu
+> Click "New Page"
+> Create Page: title "New Page", Link button -> "Test Home Page"
+> Test: page title == "New Page"
+> Test: page body == "Test Home Page"
+> Click "Test Home Page" link
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Return to main menu
+> Edit "Test Project": Delete Project
+> Test: "Test Project" does not exist
+> End Test
+
+testManualHyperlink
+> Create Project: "Test Project"
+> Create Page: title "Test Home Page", body "Test page body."
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Open Action Bar menu
+> Click "New Page"
+> Create Page: title "New Page", body "[Manual Link](p0)"
+> Test: page title == "New Page"
+> Test: page body == "Manual Link"
+> Click "Manual Link" link
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Return to main menu
+> Edit "Test Project": Delete Project
+> Test: "Test Project" does not exist
+> End Test
+
+testAutoHyperlink
+> Create Project: "Test Project"
+> Create Page: title "Test Home Page", body "Test page body."
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Open Action Bar menu
+> Click "New Page"
+> Create Page: title "New Page", body "Typing Test Home Page should set up an auto hyperlink."
+> Test: page title == "New Page"
+> Test: body contains "Test Home Page"
+> Click "Test Home Page" link
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Return to main menu
+> Edit "Test Project": Delete Project
+> Test: "Test Project" does not exist
+> End Test

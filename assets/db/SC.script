@@ -1,0 +1,42 @@
+CREATE SCHEMA PUBLIC AUTHORIZATION DBA
+CREATE MEMORY TABLE PROJECTS(ID VARCHAR (20), TITLE LONGVARCHAR, HOME VARCHAR (20), VIEWS INTEGER, PRIMARY KEY (ID))
+CREATE MEMORY TABLE PAGES   (ID VARCHAR (20), TITLE LONGVARCHAR, BODY LONGVARCHAR, VIEWS INTEGER, PROJECT VARCHAR (20), PRIMARY KEY (ID), FOREIGN KEY (PROJECT) REFERENCES PROJECTS(ID) ON DELETE CASCADE)
+CREATE MEMORY TABLE CHILDREN (PARENT VARCHAR (20), CHILD VARCHAR(20), PRIMARY KEY (PARENT, CHILD), FOREIGN KEY (CHILD) REFERENCES PAGES(ID) ON DELETE CASCADE, FOREIGN KEY (PARENT) REFERENCES PAGES(ID) ON DELETE CASCADE)
+CREATE MEMORY TABLE STUDENTS(STUDENTID INTEGER NOT NULL PRIMARY KEY,NAME VARCHAR(20),ADDRESS VARCHAR(20))
+CREATE MEMORY TABLE COURSES(COURSEID VARCHAR(8) NOT NULL PRIMARY KEY,NAME VARCHAR(20))
+CREATE MEMORY TABLE STUDENTSCOURSES(COURSEID VARCHAR(8) NOT NULL,STUDENTID INTEGER NOT NULL,GRADE VARCHAR(5),CONSTRAINT CONSTRAINT1 PRIMARY KEY(COURSEID,STUDENTID),CONSTRAINT CONSTRAINT2 FOREIGN KEY(STUDENTID) REFERENCES STUDENTS(STUDENTID),CONSTRAINT CONSTRAINT3 FOREIGN KEY(COURSEID) REFERENCES COURSES(COURSEID))
+CREATE USER SA PASSWORD ""
+GRANT DBA TO SA
+SET WRITE_DELAY 20
+SET SCHEMA PUBLIC
+INSERT INTO PROJECTS VALUES ('project1', 'Tutorial', 'p1', 0)
+INSERT INTO PAGES VALUES ('p1', 'Home Page',   'This is the home page for a wiki. You can edit pages with markdown. [You can also make links to other pages in the wiki](p2)', 0, 'project1')
+INSERT INTO PAGES VALUES ('p2', 'Second Page', '#Congratulations, the link worked.', '0', 'project1')
+INSERT INTO PAGES VALUES ('p3', 'Third Page',  'This page demonstrates quotes. >This is the first level of a block quote >>This is the second level of a block quote >Ending first level. Ending main level.', 0, 'project1')
+
+INSERT INTO PAGES VALUES ('p4', 'Odd Pages', 'All odd pages in this project', 0, 'project1')
+INSERT INTO PAGES VALUES ('p5', 'Low Pages', 'All pages with number below 2 in this project', 0, 'project1')
+
+INSERT INTO CHILDREN VALUES ('p4', 'p1')
+INSERT INTO CHILDREN VALUES ('p4', 'p3')
+INSERT INTO CHILDREN VALUES ('p5', 'p1')
+INSERT INTO CHILDREN VALUES ('p5', 'p2')
+
+INSERT INTO PROJECTS VALUES ('project2', 'Second Project', 'p6', 0)
+
+INSERT INTO PAGES VALUES ('p6', 'Page Title 6', 'Page Content 6', 0, 'project2')
+INSERT INTO PAGES VALUES ('p7', 'Page Title 7', 'Page Content 7', 0, 'project2')
+INSERT INTO PAGES VALUES ('p8', 'Page Title 8', 'Page Content 8', 0, 'project2')
+INSERT INTO PAGES VALUES ('p9', 'Page Title 9', 'Page Content 9', 0, 'project2')
+INSERT INTO PAGES VALUES ('p10', 'Page Title 10', 'Page Content 10', 0, 'project2')
+INSERT INTO PAGES VALUES ('p11', 'Page Title 11', 'Page Content 11', 0, 'project2')
+INSERT INTO PAGES VALUES ('p12', 'Page Title 12', 'Page Content 12', 0, 'project2')
+INSERT INTO PAGES VALUES ('p13', 'Page Title 13', 'Page Content 13', 0, 'project2')
+INSERT INTO PAGES VALUES ('p14', 'Page Title 14', 'Page Content 14', 0, 'project2')
+INSERT INTO PAGES VALUES ('p15', 'Page Title 15', 'Page Content 15', 0, 'project2')
+INSERT INTO PAGES VALUES ('p16', 'Page Title 16', 'Page Content 16', 0, 'project2')
+INSERT INTO PAGES VALUES ('p17', 'Page Title 17', 'Page Content 17', 0, 'project2')
+INSERT INTO PAGES VALUES ('p18', 'Page Title 18', 'Page Content 18', 0, 'project2')
+INSERT INTO PAGES VALUES ('p19', 'Page Title 19', 'Page Content 19', 0, 'project2')
+INSERT INTO PAGES VALUES ('p20', 'Page Title 20', 'Page Content 20', 0, 'project2')
+

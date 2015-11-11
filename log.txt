@@ -1,0 +1,253 @@
+Project Name: UUiki
+Team Members:
+	Michael Klassan		klasse93
+	Steve Bairos-Novak	bairosns
+	Keane Kraus			krausk
+	Timothy Tebinka		umtebink
+	Karl Friesen		fries135
+	
+Trello Project:
+https://trello.com/b/CGVSmsLH/comp3350-project
+
+##############
+# Iteration 3
+##############
+
+Dev Tasks Iteration 3
+
+Unit Tests             	                 			Est. 8hr - Keane, Karl, Michael - 7 hr
+Integration Tests                           		Est. 25hr - Keane - 28 hr
+Reworking error handling                    		Est. 2hr - Steve - 1hr
+Add a home button     	                  			Est 0.5hr - Steve - 0.5hr
+Most popular page/projects                  		Est. 4hr - Steve - 6hrs
+Write Acceptance Test Scripts               		Est. 12hr - Tim - 10.25hr
+Auto Hyperlinks                                     Est. 2hr - Steve - 2hr
+Adding Search                                      	Est. 7hr - Michael, Karl - 5 hr
+Refactoring Projects and Pages, fixing dependencies Est. 5hr - Michael - 7 hr
+Refactoring creating projects and pages     		Est. 2hr - Michael - 2 hr
+Refactoring various pieces                         	Est. 4hr - Karl - 4 hr
+Improving database contents                        	Est. 2hr - Karl - 2 hours
+
+THE LOG (Iteration 3)
+
+July 9 - Karl - 2 hours
+	- Creating final database contents
+	- Patching Tests
+July 8 - Steve - 2 hours - Presentation prep
+July 8 - Michael - 2 hours
+	- Reviewing code
+	- Fixing warnings
+	- added createNewPage and removed getNewID
+	- added createNewProject and removed newProjectID
+July 8 - Steve - 2 hours - Wrestling with regexes to not infinitely link a page
+July 8 - Karl - 6 hours
+	- Reducing code in ViewPage and EditPage, moving to business layer
+	- Improving database access by replacing create and insert with a setPage method
+	- New search function which uses partial non case sensitive matches across all pages
+	- Moved "All" and "Help" page creation into business
+	- Improving project creation to remove potential failures
+	- Lots of refactoring and checking for bugs
+July 8 - Keane - 6 hr - Integration tests and unit tests.
+July 8 - TEAM MEETING - 1.5 hr - Presentation discussion
+July 8 - Tim - 45 min - Finish acceptance tests for last user story
+July 7 - Keane - 4 hr - Integration tests and bug fixes.
+July 7 - Karl - 3 hours
+	- Set up home button
+	- Tweaked page editing
+	- Starting search
+	- Making search tests
+July 7 - TEAM MEETING - 1 hr - Presentation and last code change discussion.
+July 6 - Micheal - 1 hour
+	- Created DataAccessTest
+	- Reverting Services to before getStubDatabase. Stub database should not be in the final version. You should pass Services the stub database as a DataAccessInterface if you want to use it as the database.
+	- Services defaults to DataAccessObject
+	- Fixed createDataAccess with DataAccessStub in AccessChildrenTest, AccessPagesTest and AccessProjectsTest
+July 6 - Keane - 5 hr - Integration tests and code merging.
+July 6 - Michael - 10 mins - Fixed ProjectTest, Fixed ChildTest
+July 6 - Michael - 30 mins - Fixed PageTest
+July 6 - Michael - 2 hours - Finished refactoring objects
+	- Refactored so Page object is no longer dependent on Main, Services and DataAccess.
+	- Refactored Page constructors to be more consistent.
+	- Refactored so Project object is no longer dependent on Main, Services and DataAccess.
+	- Refactored Project constructors  to be more consistent.
+	- Added newPageID to AccessPages to get a new unique Id
+	- Added newProjectID to AccessProjects to get a new unique Id
+July 5 - Tim - 2 hour - Continued acceptance tests
+July 5 - Keane - 5 hr - Integration tests and tests for page view code.
+July 4 - Michael - 3 hours - fixed error pop up when creating a new project, refactoring
+July 4 - Tim - 3 hour - Continued acceptance tests
+                        Added automatic hyperlinks to EditPageActivity
+July 4 - Keane - 5 hr - Integration tests and integrating Steve's page view code
+July 3 - Michael - 3 hours - search function, search test, refactoring
+July 3 - Steve - 1 hour   - Reworked how errors are handled using try/catch blocks. They should work much better now. Yay!
+July 3 - Steve - 0.5 hour - Add a home button to the ViewPageActivity
+July 3 - Steve - 4.5 hour - Completed UI/other logic and other stuff for "most popular pages"
+July 3 - Tim - 3 hour - Continued acceptance tests
+July 3 - Keane - 3 hr - Integration tests
+July 3 - Michael - 1 hour - Addded search business class
+July 2 - Tim - 2 hour - Set up the project to use Robotium
+                        Continued working on test scripts, began writing acceptance tests
+July 1 - Steve - 1.5 hour - Began working on "most popular page/projects", mostly did persistence layer things
+July 1 - Steve - 1.5 hour - Writing up our retrospective activity document
+July 1 - Keane - 4 hr - Copied DataAccess tests into a new test and reworked into Integration tests for the HSQL database.
+July 1 - Tim - 1 hour - Created a brief presentation overview and committed it to the 'docs' folder
+                        Began working on the acceptance test scripts
+June 30 - TEAM MEETING - 1 hr - Discussed Iteration 3
+##############
+# Iteration 2
+##############
+
+Dev Tasks Iteration 2
+
+Add Category - Est. 6hr - Actual 7hr - Mike, Karl
+Search Function - Est. 8hr  - Actual 12hr - Tim, Karl
+Refactoring - Est. 20hr - Actual 20.5hr - Steve, Mike, Keane, Karl
+Planning - Est. 6hr - Actual 8hr - Mike, Keane
+Test busines - Est. 10hr - Actual 10hr - Keane, Karl
+Auto-Hyperlinks (uncomplete) - Est. 4hr - Actual 2.5 - Tim, Karl, Keane
+Implement Child - Est. 6hr - Actual 7.5hr - Mike, Karl
+Database - Est. 5hr - Actual 4hr - Karl
+Database interface - Est. 0.5hr - Actual 0.5hr - Mike
+Refactor stub DB to use new interface - Est. 0.5hr - Actual 0.5hr - Mike
+Page, Project Test - Est. 4hr - Actual 3hr - Keane
+.bat script - Est. 0.5hr - Actual 0.5hr - Keane
+Readme - Est. 0.5hr - Actual 0.5hr - Steve, Keane
+
+THE LOG (Iteration 2)
+June 23 - Michael - 1 hr - Fixing all warnings, Fixing formatting.
+June 22 - Karl    - 6 hr - Updating DB to use Child structure, adding new database functions, fixing bugs in viewpage and editpage to handle changes to underlying database.
+June 23 - Steve	  - 3 hr - Assisting in debugging, adding delete project button, removing unnecessary code.
+June 22 - Keane   - 4 hr - Getting documentation ready, fixing small bugs, merging patches.
+June 22 - Keane   - 4 hr - Updated tests to reflect changes to DataAccessStub.  Fixed deleteProject.
+June 21 - Keane   - 5 hr - Updated more tests (AccessPages, AccessProjects, Child, Page, and Project tests) as well as updating some other code.
+June 21 - Steve   - 4.5 hours - 
+	Took care of a couple law of Demeter issues in presentation layer - haven't noticed any other ones that are fixable?
+	Activities now pass projectIDs instead of projectNames
+	Improved homogeneousness of code in Business layer (added @Overrides, added/deleted new lines)
+	Added better error checks in DataAccessStub (if there's a page and a project as parameters, we'll make sure the page belongs to the project. And some other fixes)
+	Fixed bug where you edit page, then hit back and it takes you to out of date version of the page
+	Deleting projects now deletes all of its pages
+	Deprecated a few things, and fixed 2 tests that I knew how to fix, the others, someone else should do...
+	Added the ability to add pages - Although it's pretty useless until Karl's changes are pushed.
+	Fixed the view/edit mode button so that Red indicates we're in edit mode and beige indicates view mode once again.
+June 20 - Michael - 2 hours -
+	Updated Main and Services to work with the database interface (currently the default database will still be stubDB).
+	Created AccessChildren business class to access child objects from the DB.
+	Fixed numerous formating problems.
+	Fixed some error handling inconsistencies.
+	All IDs are now stored as Strings.
+	DataAccesStub implements DataAccess.
+	Pages are retrieved will just their pageID.
+June 19 - Keane   - 3 hr - Updated most of the Page and Project tests
+June 19 - Steve   - 1.5 hour - Re-did the Utils class and renamed is Dialog, redid the code in there. Also, worked on tracking down some weird issues with the project which I've concluded are because people have not pushed the right stuff yet hopefully...
+June 18 - PAIR PROGRAMING - Michael + Karl - 4 hours - Working on real database and refactoring.
+June 17 - Karl    - 5 hr - Implementing category changes to pageview, editpage, and database.
+June 18 - Tim     - 30 min - Refined search functionality to make enter key call the search button, and to hide the keyboard when search is clicked.
+June 17 - Keane   - 1 hr - Written Detailed User Stories for Images and Headings
+June 16 - Michael - 1 hour - Integrating Child object.
+June 16 - Tim     - 45 min - Final review of search and hyperlink code, checked code for collisions with repo, diagnosed issues with eclipse not properly synching my project with the repo.
+June 16 - Michael - 30 min - Made stubDB implement DataAccess. Fixed naming mistake getProjectsSequential -> getProjectSequential.
+June 16 - Michael - 1 hour - Added Child relational object for page to page relationships. Added DataAccess interface.
+June 15 - Tim   - 2 hour - Worked on resolving search issues, ended up implementing a slightly simpler solution, created and submitted search patch for review.
+June 14 - Tim   - 1 hour - Reviewed search code in PagesActivity, attempting to diagnose issue with search string not being passed to page filter.
+June 14 - MEETING - Michael and Karl - 2hr - Discussed and designed database.
+June 13 - Steve - 2 hours - CRed Tim's work on searches, found cause of crashes and fixed it. Added a TODO in Utils as well.
+June 13 - Tim     - 30 min - Integrated auto hyperlinks to presentation layer, tested functionality on tablet.
+June 12 - Michael - 1 hour - project management, dev tasks, requirements, formatting, changes for Iteration 2
+June 12 - Tim    - 2.5 hour - Wrote and tested business logic for auto hyperlinks. Created first hyperlink patch.
+June 11 - Michael - 1 hour - project management, dev tasks, requirements, formatting, changes for Iteration 2
+June 11 - Tim    - 15 min - Re-reviewed search code, removed broken code, created new patch
+June 6 - Tim     - 30 min - Reviewed all files used to implement page searching. Made SearchPatch1.
+June 6 - Tim     - 1 hour - Worked on search code in PagesActivity.java
+June 5 - Tim     - 1.5 hour - Continued working on search, refactored some code to be more readable/maintainable.
+June 5 - Tim     - 5 hour - Did work to implement Page search:
+	Created searchable.xml file
+	Modified AndroidManifest.xml to make ActivityPages searchable
+	Added new string references in res/values/strings.xml
+	Added a search button to the layout of activity_pages.xml and linked it to a search function
+	in PagesActivity.java
+	Added a search by string query function to DataAccessStub.java
+	Added a search function to AccessPages.java that calls the search from DataAccessStub.java
+	Modified AccessPagesTest.java to verify the correct functionality of the search method added
+	to AccessPages.java
+	Edited PagesActivity.java to implement search functionality; at this point everything works
+	except retrieval of the input string from the search bar which currently crashes the program
+	I will work to resolve that issue then submit a patch for code review
+June 4 - Tim     - 2 hour - Created User and Category classes with an initial suite of tests.
+
+##############
+# Iteration 1
+##############
+
+Dev Tasks Iteration 1
+Set up Repository - 								Estimated 1hr - Actual Time 1hr - Karl
+Create Domain Objects (Project, Page) - 			Estimated 6hr - Actual Time 9hr - Keane, Timothy, Michael
+Create Stub Database -			 					Estimated 4hr - Actual time 3hr - Timothy, Michael
+Refactor Example Code (renaming and otherwise) - 	Estimated 2hr - Actual Time 2hr - Michael
+Business Logic - 									Estimated 12hr - Actual Time 4hr - Michael
+Unit Tests - 										Estimated 10hr - Actual 16.5hr - Keane, Timothy
+Edit Project/Page UI - 								Estimated 7hr - Actual Time 4hr - Steve
+Project/Page Select UI - 							Estimated 5hr - Actual Time 3hr - Steve, Michael
+Display Page UI - 									Estimated 8hr - Actual Time 3hr - Karl, Steve, Michael
+Readme - 											Estimated 1hr - Actual Time 1hr - Steve
+.bat scripts - 										Estimated 1hr - Actual Time 0.5hr - Keane
+
+THE LOG (Iteration 1)
+
+June 4 - Karl    - 1 hour - Finalizing unit tests.
+June 4 - Michael - 5 mins - Formated all java files. Fixed warnings.
+June 3,4 - Steve - 6 hours - Bug fixes, testing, readme, etc.
+June 3 - Michael - 2 hour - Fixing things after the URL changes.
+June 4 - Michael - 5 mins - Formated all java files. Fixed warnings.
+June 3,4 - Steve - 6 hours - Bug fixes, testing, readme, etc.
+June 3 - Michael - 2 hour - Fixing things after the URL changes.
+June 3 - Michael - 2 hour - Fixing up the code (formating, warnings, TODOS, etc..) for iteration 1 handin
+June 3 - Michael - 30 mins - Fixed main name bug when changing the project name.
+June 3 - Keane   - 5.5 hour - Developed tests for AccessProjects and AccessPages and fixed code for AccessProjects, DataAccessStub, and AccessPages.
+June 3 - Michael - 1 hour - Fixed pages equals method.
+June 3 - Karl    - 3 hour - Modifying database stub, improving project edit and preventing duplicated pages with the same URL.
+June 3 - Steve   - 2 hours - Some more UI things
+June 3 - Karl    - 2 hour - Switching to URL based protocol, adding link based inter page navigation within the application
+June 3 - Karl    - 3 hour - Setting up page editing, finalizing page view
+June 3 - Michael - 1 hour - Worked on UI
+June 3 - Michael - 2 hour - EditPage now works with the business layer.
+June 2 - Keane   - 3 hour - Developed tests for AccessProjects and fixed code for AccessProjects, and DataAccessStub.
+June 2 - Michael - 1 hour - EditProject UI working with business and stubDB.
+June 2 - Steve   - 1 hour - Made cancel button work, figured out how to change title, other UI things
+June 2 - Karl	 - 4 hours - Setting up View Page and related systems, research, debugging odd issues with android SDK.
+June 2 - Michael - 1 hour - presentaion HomeActivity project select UI working with business.
+June 2 - Michael - 1 hour - Connecting the subsystems.
+June 2 - Michael - 10 mins - Fixed the formating in all java files.
+June 2 - Michael - 1.5 hours - worked on objects and persistence.
+June 2 - Michael - 30 mins -  worked on objects.
+June 2 - Michael - 2 hour - Refactored code:
+	Renamed project: SRSYS => Wiki
+	Renamed objects: WikiProject => Project
+	Renamed objects: WikiPage => Page
+	Renamed tests: To match new object names.
+	Removed SRSYS files.
+	Converted CLI to use our Wiki.
+	Converted HomeActivity to use our Wiki.
+June 2 - Michael - 1 hour - Changed project list colors and added a style file.
+June 2 - Michael - 30 mins - Worked on viewPageActivity.
+June 2 - Michael - 30 mins - Created AccessPages.java in business.
+June 2 - Michael - 30 mins - Fixed errors in build and completed AccessProjects class.
+June 1 - Steve - 0.5hr - Started working on business objects, and some administrative stuff on Trello
+June 1 - Steve - 2hr - Set up some business for making the view project/page into HTML
+May 31 - Tim - 0.5hr - Finished the first draft of the stub db.
+May 30 - Steve - 3hr - Polished a lot of the UI stuff, it's close now
+May 30 - Tim - 1hr - Began working on stub DB.
+May 30 - Steve - 6hr - Did most of the UIs for editing
+May 30 - Michael - 4 hr - Ceated Developer tasks, Set up hangouts, helped out other groupmembers.
+May 30 - Tim - 4hr - Created and tested WikiProject.
+May 30 - Keane - 4hr - Created and tested WikiPage.  Helped Michael with setting up documentation.
+May 30 - TEAM MEETING - 3hr
+	Tim, Steve, Keane, Michael
+	Started the underlying objects and front end.
+May 29 - Steve B - 30min - Worked on edit UI a bit
+May 25 - TEAM MEETING - 30min
+	Karl, Steve, Keane, Michael
+	Started some UI design diagram and class structure.
+May 29 - Creation of LOG
+
+

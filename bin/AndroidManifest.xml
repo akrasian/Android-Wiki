@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="comp3350.wiki"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="comp3350.wiki.presentation.HomeActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop" >
+            
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="comp3350.wiki.presentation.EditPageActivity"
+            android:label="@string/title_activity_edit_page" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="wiki.presentation.EditPageActivity" />
+        </activity>
+        <activity
+            android:name="comp3350.wiki.presentation.EditProjectActivity"
+            android:label="@string/title_activity_edit_project"
+            android:parentActivityName="comp3350.wiki.presentation.HomeActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.wiki.presentation.HomeActivity" />
+        </activity>
+        
+        <activity
+            android:name="comp3350.wiki.presentation.ViewPageActivity"
+            android:label="@string/title_activity_view_page"
+            android:parentActivityName="comp3350.wiki.presentation.HomeActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.wiki.presentation.HomeActivity" />
+        </activity>
+        <uses-library android:name="android.test.runner" />
+        <activity 
+            android:name="comp3350.wiki.presentation.SearchPageActivity"
+            android:label="@string/title_activity_search_page"
+            android:parentActivityName="comp3350.wiki.presentation.HomeActivity">
+            
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="comp3350.wiki.presentation.HomeActivity" />
+		</activity>
+	</application>
+
+	<instrumentation android:targetPackage="comp3350.wiki" android:name="android.test.InstrumentationTestRunner" />
+</manifest>

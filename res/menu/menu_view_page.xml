@@ -1,0 +1,15 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" tools:context="srsys.presentation.ViewPageActivity">
+    <item android:id="@+id/search"
+          android:title="@string/action_search"
+          android:icon="@drawable/ic_action_search"
+          android:showAsAction="collapseActionView|ifRoom"
+          android:actionViewClass="android.widget.SearchView" />
+    
+    <item android:id="@+id/editPage" android:title="@string/editPage"></item>
+    <item android:id="@+id/deletePage" android:title="@string/deletePage"></item>
+    <item android:id="@+id/homePage" android:title="@string/homePage"></item>
+    <item android:id="@+id/newPage" android:title="@string/newPage"></item>
+    <item android:id="@+id/helpPage" android:title="@string/helpPage"></item>
+</menu>

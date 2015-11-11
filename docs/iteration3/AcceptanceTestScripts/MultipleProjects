@@ -1,0 +1,43 @@
+Multiple Projects
+-----------------
+
+testAccessProjectAndEditPages
+> Open Project: "Tutorial"
+> Test: page title == "Home Page"
+> Test: page body == "This is the home page for a wiki. You can edit pages with markdown. You can also make links to other pages in the wiki"
+> Open drawer
+> Click "All"
+> Open Page: "Second Page"
+> Test: page title == "Second Page"
+> Test: page body == "Congratulations, the link worked."
+> Open Action Bar menu
+> Click "Edit Page"
+> Change page title: "Edited Page"
+> Change page body: "#Edited body."
+> Test: page title == "Edited Page"
+> Test: page body == "Edited body."
+> Open Action Bar menu
+> Click "Edit Page"
+> Change page title: "Second Page"
+> Change page body: "#Congratulations, the link worked."
+> Test: page title == "Second Page"
+> Test: page body == "Congratulations, the link worked."
+> End Test
+
+testCreateProjectAndPages
+> Create Project: "Test Project"
+> Create Page: title "Test Home Page", body "Test page body."
+> Test: page title == "Test Home Page"
+> Test: page body == "Test page body."
+> Open Action Bar menu
+> Click "New Page"
+> Create Page: title "New Page", body "New page body."
+> Test: page title == "New Page"
+> Test: page body == "New body."
+> Open Action Bar menu
+> Click "Delete Page"
+> Return to main menu
+> Edit "Test Project": title = "Edited Test Project"
+> Edit "Edited Test Project": Delete Project
+> Test: "Edited Test Project" does not exist
+> End Test

@@ -1,0 +1,51 @@
+Categories
+----------
+
+testAddPageToCategory
+> Open Project: "Tutorial"
+> Create Page: title "New Page", body "New page body."
+> Test: page title == "New Page"
+> Test: page body == "New body."
+> Edit "New Page": Add category "Odd Pages"
+> Open page "Odd Pages"
+> Test: body contains "New Page"
+> Click "New Page" link
+> Test: page title == "New Page"
+> Test: page body == "New body."
+> Delete "New Page"
+> Open page "Odd Pages"
+> Test: body does not contain "New Page"
+> End Test
+
+testAccessCategories
+> Open Project: "Tutorial"
+> Open page "Odd Pages"
+> Test: body contains "Home Page"
+> Test: body contains "Third Page"
+> Click "Third Page" link
+> Test: page title == "Third Page"
+> Test: body contains "This page demonstrates quotes"
+> Test: body contains "This is the first level of a block quote"
+> Test: body contains "This is the second level of a block quote"
+> Test: body contains "Ending first level"
+> Test: body contains "Ending main level"
+> Return to "Home Page"
+> Open page "Low Pages"
+> Test: body contains "Home Page"
+> Test: body contains "Second Page"
+> Click "Second Page" link
+> Test: page title == "Second Page"
+> Test: page body == "Congratulations, the link worked."
+> Return to "Home Page"
+> Open page "All"
+> Test: body contains "Home Page"
+> Test: body contains "Second Page"
+> Test: body contains "Third Page"
+> Test: body contains "Low Pages"
+> Test: body contains "Odd Pages"
+> Click "Home Page" link
+> Test: page title == "Home Page"
+> Test: body contains "This is the home page for a wiki"
+> Test: body contains "You can edit pages with markdown"
+> Test: body contains "You can also make links to other pages in the wiki"
+> End Test

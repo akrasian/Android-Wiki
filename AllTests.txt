@@ -1,0 +1,261 @@
+java junit.textui.TestRunner comp3350.tests.IntegrationTests
+Creating connection
+Opened HSQL database database/SC
+.
+Starting testUpdateProject
+
+Finished testUpdateProject
+.
+Starting testDeleteProject
+
+Finished testDeleteProject
+.
+Starting testGetSequential
+
+Finished testGetSequential
+.
+Starting testInsertProject
+
+Finished testInsertProject
+.
+Starting testGetWikiPagesBySearch
+Finished testGetWikiPages
+.
+Starting testAutoHyperlinkNullBodyString
+Finished testAutoHyperlinkNullBodyString
+.
+Starting testAutoHyperlink
+Finished testAutoHyperlink
+.
+Starting testGetProject
+
+Finished testGetProject
+.
+Starting testInsertPage
+Getting page p23
+
+Finished testInsertPage
+..
+Starting testGetProjects
+
+Finished testGetProjects
+.
+Starting testGetWikiPages
+
+Finished testGetWikiPages
+.Getting page p2
+.
+Starting testUpdatePage
+Getting page p2
+Getting page p2
+
+Finished testUpdatePage
+.
+Starting testDeletePage
+Getting page p404
+Getting page p404
+
+Finished testDeletePage
+.
+Starting testPageByID
+Getting page p1
+Getting page p2
+Getting page p3
+Getting page p200
+
+Finished testPageByID
+.
+Starting testGetChildren
+Getting page p1
+Getting page p2
+Getting page p3
+Getting page p4
+Looking for children of p4
+Project ID = project1
+Getting page p5
+Looking for children of p5
+Project ID = project1
+Third Page
+
+Finished testGetChildren
+.
+Starting testTopPages
+Getting page p404
+Getting page p405
+Getting page p406
+
+Finished testTopPage
+.Looking for children of p404
+Project ID = project1
+Looking for children of p404
+Project ID = project1
+.
+Starting testTopPage
+
+Finished testTopPage
+.PageAccess: The project is null
+Getting page p404
+Getting page null
+..Getting page p1
+Getting page p2
+Getting page p2
+Getting page p4
+Looking for children of p4
+Project ID = project1
+Getting page p22
+Getting page p4
+Getting page p4
+Looking for children of p4
+Project ID = project1
+Getting page p22
+Getting page p4
+Looking for children of p4
+Project ID = project1
+
+Time: 0.113
+
+OK (23 tests)
+
+java junit.textui.TestRunner comp3350.tests.UnitTests
+Opened stub database database/SC
+.
+Starting testCallConstructorWithNullName
+Finishing testCallConstructorWithNullName
+.
+Starting testCreateProject
+Finishing testCreateProject
+.
+Starting testSetProjectName
+Finishing testSetProjectName
+.
+Starting testCopyProject
+Finishing testCopyProject
+.
+Starting testViewCount
+
+Finished testViewCount
+.
+Starting testGettersAndSetters
+
+Finished testGettersAndSetters
+.
+Starting testFullPageConstructor
+
+Finished testFullPageConstructor
+.
+Starting testViewCount
+
+Finished testViewCount
+.
+Starting testEquals
+
+Finished testEquals
+.
+Starting testEquals
+
+Finished testEquals
+.
+Starting testTypicalCase
+
+Finished testTypicalCase
+.
+Starting testAutoHyperlinkNullBodyString
+Finished testAutoHyperlinkNullBodyString
+.
+Starting testGetWikiPagesBySearch
+Finished testGetWikiPages
+.
+Starting testGetSequential
+
+Finished testGetSequential
+.
+Starting testDeletePage
+Getting page p404
+Getting page p404
+
+Finished testDeletePage
+..
+Starting testTopPages
+Getting page p5
+Getting page p4
+
+Finished testTopPage
+.
+Starting testSetPage
+.
+Starting testGetWikiPages
+
+Finished testGetWikiPages
+.
+Starting testPageByID
+Getting page p1
+Getting page p2
+Getting page p3
+Getting page p200
+
+Finished testPageByID
+.
+Starting testInsertPage
+Getting page p22
+
+Finished testInsertPage
+.
+Starting testUpdatePage
+Getting page p2
+Getting page p2
+
+Finished testUpdatePage
+.
+Starting testTopPage
+
+Finished testTopPage
+.
+Starting testGetProjects
+
+Finished testGetProjects
+.
+Starting testGetProject
+
+Finished testGetProject
+.
+Starting testInsertProject
+
+Finished testInsertProject
+.
+Starting testUpdateProject
+
+Finished testUpdateProject
+.
+Starting testDeleteProject
+
+Finished testDeleteProject
+.Getting page p2
+.Getting page p4
+Getting page p2
+Looking for children of p4
+Project ID = project1
+Looking for children of p4
+Project ID = project1
+.
+Starting testGetChildren
+Getting page p1
+Getting page p2
+Getting page p3
+Getting page p4
+Looking for children of p4
+Project ID = project1
+Getting page p5
+Looking for children of p5
+Project ID = project1
+Third Page
+
+Finished testGetChildren
+.Closed stub database wikiStub
+
+Starting Persistence test DataAccess (using stub)
+Opened stub database database/SC
+Finished Persistence test DataAccess (using stub)
+
+Time: 0.117
+
+OK (32 tests)

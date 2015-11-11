@@ -1,0 +1,28 @@
+Presentation Outline
+--------------------
+
+Introduction
+> Each person introduces themselves
+> Describe that the app is called UUiki and that it is designed for users of 
+  Android devices to be able to create specialized wikis covering various topics
+> Explain that a user can create and edit pages on a wiki, organize pages by
+  category, link to other pages in the wiki, and search the contents of a wiki
+
+Live Demo
+> Launch the app to the main page
+> Pick an existing wiki and show navigation through its pages
+> Outline and demonstrate some of the features like categories, search, in-body
+  hyperlinks, etc.
+> Show a page edit and what can be changed
+> Go back to home page and create a new project, walking through the process and
+  showing what a freshly created project looks like
+
+Postmortem
+> Definitely discuss the major restructuring of pages from a list structure to a
+  tree structure to allow for categorization as this was the largest redesign from
+  the original concept to the finished project
+> Also have to discuss our area of improvement chosen from the iteration 2
+  retrospective (this is a manditory requirement)
+> Pick one other topic to discuss about the project structure, scope, development
+  process, etc. which should fill out the rest of our presentation time
+> We should decide what these other 2 discussion topics will be ahead of time
